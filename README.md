@@ -34,4 +34,9 @@ A lightweight language model built from scratch using PyTorch. The project imple
 
 **Technologies used:** Python, PyTorch
 
+### Path Generation for Maximum Flow Optimization
+
+An optimization project developed for the course *Introduction to Optimization under Uncertainty*. The project implements a path-based maximum flow model using column generation. It solves a restricted master problem with linear programming and iteratively adds new source-to-sink paths through a pricing problem based on dual variables. The method was tested on large randomly generated directed graphs and compared with a conventional maximum flow LP formulation.
+
+**Technologies used:** Python, PuLP, NetworkX, NumPy
 

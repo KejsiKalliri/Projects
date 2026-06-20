@@ -1,3 +1,5 @@
+# University Projects
+
 This repository contains a collection of academic projects developed during my university studies in Computer Engineering and Artificial Intelligence. The projects cover different areas, including web development, desktop applications, database management, machine learning, natural language processing, and deep learning.
 
 ## Projects
@@ -31,3 +33,5 @@ A machine learning project focused on sentiment analysis using a pre-existing co
 A lightweight language model built from scratch using PyTorch. The project implements core transformer components, including embeddings, positional encoding, self-attention, and transformer blocks. The model was trained on a small custom vocabulary for next-word prediction from short text sequences.
 
 **Technologies used:** Python, PyTorch
+
+

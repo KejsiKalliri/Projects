@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Faqja Kryesore</title>
+    <link rel="stylesheet" type="text/css" href="HomeStyle.css">
+    <script src="script.js"></script>
+    <script src="scriptMyCourses.js"></script>
+    <script src="scriptMyFinishedCourses.js"></script>
+    <script src="scriptTopRatedCourses.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navleft">
+        <a href="https://upt.edu.al/" id="UPT-logo"><img src="Imazhe/UPT_logo.png" id="UPT-logo"></a>
+        <a href="Home.html" id="home">Home</a>
+        <div class="dropdown">
+          <a href="courses.html" class="dropbtn">Courses &#709;</a>
+          <div class="dropdown-content">
+              <a href="courses.html">Courses</a>
+              <a href="topCourses.html">Top Courses</a>
+          </div>
+      </div>
+        <a href="myCourses.html" id="myCourses">My courses</a>
+        <a href="timetable.html" id="timetable">Timetable</a>
+        <a href="#" id="about">About us</a>
+    </div>
+
+    <div class="navright">
+       <form action="LogOutServlet" method="post">
+           <a href="login.html" id="logout" >Logout</a>
+       </form>
+    </div>
+  </div>
+
+  <div class="header">
+    <img src="Imazhe/UPT_background.png" alt="UPT_background" id="UPT_background">
+    <div class="centered">
+      <h1>Welcome to the courses page of the Polytechnic University of Tirana! </h1>
+      <h2 id="headerText">Here you can enroll in courses and leave feedback for all the courses that you have already attended.</h2> 
+    </div>
+  </div>
+
+  <div class="webDescription">
+    <h2 class="title">Here, you can explore the courses you have already enrolled in, see your timetable and leave reviews!</h2>
+    <div class="grid">
+      <div class="myCourses grid">
+        <a href="myCourses.html">
+          <img src="Imazhe/enrolled.png">
+          <h2>View your courses</h2>
+        </a>     
+      </div>
+      <div class="timetable grid">
+        <a href="timetable.html">
+          <img src="Imazhe/timetable.png">
+          <h2>Plan your studies</h2>
+        </a>
+      </div>
+      <div class="reviews grid">
+        <a href="topCourses.html">
+          <img src="Imazhe/leave review.png">
+          <h2>View the top rated courses</h2>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="allCoursesSlides">
+    <h2 class="title">See all the courses that you can attend:</h2>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade" id="slide1">
+        <div class="course">
+          <h2>Calculus 1</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Linear Algebra</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+        </div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Physics</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>C Programming</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Calculus 2</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Object Oriented Programming</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Computer Organization</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Data Structure</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Electrical & Electronic Circuits</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Signals and Systems</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Computer Networks</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Web Technologies and Programming</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Algorithms and Advanced Programming</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Data Base</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="course">
+          <h2>Operating Systems</h2>
+          <p class="description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="lecturer">Lecturer: Prof. John Smith</p>
+          <p class="times">Time: 08:00:00</p>
+          <p class="location">Location: Hall 201</p>
+
+        </div>
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+  </div>
+
+</body>
+
+<footer>
+  <div class="contact">
+    <h4>Contact Us</h4>          
+    <p>Phone number: +355 4 227 81 59<br>
+    Email: <a href="mailto:info@upt.al">info@upt.al</a> <br>
+    Website: <a href="https://upt.edu.al/">www.upt.edu.al</a> <br>
+    Address: Bul. "Dëshmorët e Kombit", Mother Teresa Square
+    </p>
+  </div>
+  <p id="copyright">&copy; Copyright 2024 - Polytechnic University of Tirana</p>
+</footer>
+
+</html>

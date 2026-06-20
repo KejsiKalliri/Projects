@@ -1,0 +1,155 @@
+@charset "ISO-8859-1";
+/*login*/
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+footer{
+    text-align: center;
+    color: #2a5278;
+}
+.navbar{
+    position: absolute;
+    display: inline-flex;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 191, 255, 0.2);
+	font-family: Bahnschrift;
+	display: inline-flex;
+}
+.navbar .navleft{
+    display: inline-flex;
+}
+.navbar .navleft a, .dropdown{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 20px 55px 10px 5px;
+    transition: all 1s;
+}
+.navbar .navleft a:hover{
+    color: black;
+    transform: scale(1.1);
+}
+.dropdown {
+    padding-right: 0px;
+}
+.dropdown .dropdown-content a{
+    padding-right: 12px;
+}
+.dropdown .dropdown-content a:hover{
+    transform: none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .navright{
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}
+.navbar .navright a{
+    text-decoration: none;
+    height: 20px;
+    color: black;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 10px;
+    transition: all 1s;
+}
+.navbar #UPT-logo{
+    height: 2em;
+    width: auto;
+    padding: 0px 0px 10px 20px;
+	margin: 5px 10px 10px 10px;
+}
+
+.loginForm, .signupForm{
+    width: 30%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px #888888;
+    padding: 40px;
+    background-color: white;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b8b6b6;
+    outline: none;
+    padding: 10px ;
+}
+i{
+    border-bottom: 1px solid #b8b6b6
+}
+i:hover{
+    cursor: pointer;
+}
+.input-column{
+    display: inline-flex;
+}
+.loginForm a, .signupForm a{
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+#forgotPassword{
+    padding: 5px;
+}
+button{
+    background-color:deepskyblue;
+    color: #fff;
+    width: 50%;
+    border: none;
+    outline: none;
+    position: relative;
+    left: 25%;
+    height: 35px;
+    border-radius: 3px;
+    margin-top: 20px;
+    transition: all 1s;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+h4{
+    text-align: center;
+    font-weight: 400;
+}

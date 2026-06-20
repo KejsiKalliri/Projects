@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="loginStyle.css">
+    <script src="../script.js"></script>
+</head>
+<body>
+
+    <div class="signupForm">
+        <form action="RegisterServlet" method="post">
+            <div class="input-row nameSurname">
+                <div class="input-column name">
+                    <input type="text" id="signUpName" required name="firstname" placeholder="Name">
+                </div>
+                <div class="input-column surname">
+                    <input type="text" id="signUpSurname" required name="lastname" placeholder="Surname">
+                </div>
+            </div>
+            <div class="input-row email">
+                <input type="email" id="signUpEmail" pattern="[a-z]+\.[a-z]+@fti.edu.al" required name="email" placeholder="Email: name.surname@fti.edu.al">
+            </div>
+            <div class="input-row passsword">
+                <input type="password" id="signUpPassword" required name="password" placeholder="Password">
+                <i class="bi bi-eye-slash" id="togglePassword" onclick="showSignUpPassword()"></i>
+            </div>
+            <div class="input-row repeatPassword">
+                <input type="password" id="signUpRepeatPassword" required name="repeatPassword" placeholder="Repeat password">
+                <i class="bi bi-eye-slash" id="togglePassword" onclick="showSignUpRepeatPassword()"></i>
+            </div>
+            
+            <button type="submit" id="signUpButton">Sign Up</button>
+            <p id="errors"></p>
+        </form>
+        <br>
+        <h4>Already registered? 
+            <a href = "login.html">Log in here</a>
+        </h4>
+    </div>
+</body>
+<footer>
+    <p>&copy; Copyright 2024 - Polytechnic University of Tirana</p>
+</footer>
+</html>

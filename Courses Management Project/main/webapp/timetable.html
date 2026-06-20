@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timetable</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="about.css">
+        <script>
+
+           
+            function timetable(){  //nuk funksionon
+
+           	    //send data to the backend
+           	    var xhr = new XMLHttpRequest();  //XMLHttpRequest (XHR) objects are used to interact with servers
+           	    // xhr.open("POST","/process",true);  //initializes a newly-created request, or re-initializes an existing one. (async=true)
+           	    xhr.open("POST","http://localhost:8080/DemoServlet/timetable",true); //url is an address to a file on a server
+           	    xhr.setRequestHeader("Content-type","application/x-www-form-url-encoded");  //sets the value of an HTTP request header.
+           	    xhr.onreadystatechange = function(){  //This should not be used with synchronous requests
+           	        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+           	            //Handle the response from the backend
+           	            console.log(xhr.responseText);
+           	           // window.alert("Response : "+ xhr.responseText);
+           	          
+           	         //  var course = document.getElementById(xhr.responseText);
+           	         //  console.log(course);
+           	        //  course.setAttribute("color","blue");
+           	        
+           	       // document.getElementById("myTimetable").innerHTML = xhr.responseText;  //funksionoi
+           	       
+           	       document.getElementById("mytimetable").innerHTML = xhr.responseText;
+           	       
+           	       }
+           	    };
+
+           	    xhr.send();
+           	}
+
+       
+       window.addEventListener("load",timetable,false);
+     //  document.getElementById("Physics").setAttribute("style","color : blue");  //nuk funksionon
+        
+        </script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="navbar">
+                <div class="navleft">
+                    <a href="https://upt.edu.al/"><img src="Imazhe/UPT_logo.png" id="UPT-logo"></a>
+                    <a href="Home.html" id="home">Home</a>
+                    <div class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses &#709;</a>
+                        <div class="dropdown-content">
+                            <a href="courses.html">Courses</a>
+                            <a href="topCourses.html">Top Courses</a>
+                        </div>
+                    </div>
+                    <a href="myCourses.html" id="myCourses">My courses</a>
+                    <a href="timetable.html" id="timetable">Timetable</a>
+                    <a href="about.html" id="about">About us</a>
+                </div>
+            
+                   <div class="navright">
+                      <form action="LogOutServlet" method="post">
+                         <a href="login.html" id="logout" >Logout</a>
+                      </form>
+                  </div>
+              </div>
+        </div>
+        
+         <h1>Courses Timetable: </h1>
+        <div class="timetable" id="mytimetable">
+        
+           
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Courses</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="CoursesStyle.css">
+        <script type="text/javascript">
+       
+        function seeFeedback(){
+        	    
+        	    var xhr = new XMLHttpRequest();  //XMLHttpRequest (XHR) objects are used to interact with servers
+        	    xhr.open("POST","http://localhost:8080/DemoServlet/seefeedbackservlet",false); //url is an address to a file on a server
+        	    xhr.setRequestHeader("Content-type","application/x-www-form-url-encoded");  //sets the value of an HTTP request header.
+        	    xhr.onreadystatechange = function(){  //This should not be used with synchronous requests
+        	        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+        	            //Handle the response from the backend
+        	            console.log(xhr.responseText);
+        	            document.getElementById("seeFeedback").innerHTML = xhr.responseText;
+        	        }
+        	    };
+
+        	    xhr.send();
+        	}
+        
+        
+        window.addEventListener("load",seeFeedback,false)
+        
+        </script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <div class="navbar">
+                <div class="navleft">
+                    <a href="https://upt.edu.al/" id="UPT-logo"><img src="../Imazhe/UPT_logo.png" id="UPT-logo"></a>
+                    <a href="Home.html" id="home">Home</a>
+                    <div class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses &#709;</a>
+                        <div class="dropdown-content">
+                            <a href="courses.html">Courses</a>
+                            <a href="topCourses.html">Top Courses</a>
+                        </div>
+                    </div>
+                    <a href="myCourses.html" id="myCourses">My courses</a>
+                    <a href="timetable.html" id="timetable">Timetable</a>
+                    <a href="#" id="about">About us</a>
+                    <a href="#" id="contact">Contact</a>
+                </div>
+            
+                   <div class="navright">
+                       <form action="LogOutServlet" method="post">
+                          <a href="login.html" id="logout" >Logout</a>
+                       </form>
+                   </div>
+            </div>
+        </div>
+        <div class="allCourses">
+        <h1>Feedbacks : </h1>
+            <div class="seeFeedback" id="seeFeedback">
+                
+                
+                
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>&copy; Copyright 2024 - Polytechnic University of Tirana</p>
+    </footer>
+</html>

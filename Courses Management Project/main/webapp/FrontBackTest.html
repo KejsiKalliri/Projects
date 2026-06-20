@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<meta charset="UTF-8">
+<title>Frontend to Backend example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="prov.css"> 
+<script type="text/javascript">
+function hello(){
+	 var p =  document.getElementById("paragraf");
+	 p.innerHTML = "<h1>Hello World</h1>"; 
+}
+</script>
+</head>
+<body>
+	<h1>Frontend to Backend example</h1>
+	<form action="#" method="get">
+		<label for="name">Name : </label> <input type="text" name="name" id="name"
+			required><br> <br> <label for="email">Email
+			: </label> <input type="email"  name="email" id="email" required><br> <br>
+		<button onclick="submitForm()">Login</button>
+		<input type="submit" value="Hello World" onclick="hello()">
+		<div id="paragraf"></div>
+	</form>
+	<script>
+    function submitForm(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+
+        //send data to the backend
+        var xhr = new XMLHttpRequest();  //XMLHttpRequest (XHR) objects are used to interact with servers
+        // xhr.open("POST","/process",true);  //initializes a newly-created request, or re-initializes an existing one. (async=true)
+        xhr.open("POST","http://localhost:8080/DemoServlet/test",false); //url is an address to a file on a server
+        xhr.setRequestHeader("Content-type","application/x-www-form-url-encoded");  //sets the value of an HTTP request header.
+        xhr.onreadystatechange = function(){  //This should not be used with synchronous requests
+            if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+                //Handle the response from the backend
+                console.log(xhr.responseText);
+              //  window.alert("Response : "+ xhr.responseText);
+                document.getElementById("paragraf").innerHTML = xhr.responseText;
+            }
+        };
+
+        xhr.send("name = " + name + "&email : " + email);
+    }
+    
+    window.addEventListener("load",submitForm,false);
+    
+
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+h1 {
+	font-family: Bahnschrift;
+}
+
+body {
+	background-color: rgba(0, 191, 255, 0.2);
+}

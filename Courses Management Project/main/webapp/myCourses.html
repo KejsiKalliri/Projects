@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Courses</title>
+<link rel="stylesheet" type="text/css" href="about.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script>
+function ongoing(){
+ //   var name = document.getElementById("name").value;
+ //   var email = document.getElementById("email").value;
+
+    //send data to the backend
+    var xhr = new XMLHttpRequest();  //XMLHttpRequest (XHR) objects are used to interact with servers
+    // xhr.open("POST","/process",true);  //initializes a newly-created request, or re-initializes an existing one. (async=true)
+    xhr.open("POST","http://localhost:8080/DemoServlet/ongoingcourses",false); //url is an address to a file on a server
+    xhr.setRequestHeader("Content-type","application/x-www-form-url-encoded");  //sets the value of an HTTP request header.
+    xhr.onreadystatechange = function(){  //This should not be used with synchronous requests
+        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+            //Handle the response from the backend
+            console.log(xhr.responseText);
+          //  window.alert("Response : "+ xhr.responseText);
+            document.getElementById("ongoing").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.send();
+}
+
+
+function finished(){
+	 //   var name = document.getElementById("name").value;
+	 //   var email = document.getElementById("email").value;
+
+	    //send data to the backend
+	    var xhr = new XMLHttpRequest();  //XMLHttpRequest (XHR) objects are used to interact with servers
+	    // xhr.open("POST","/process",true);  //initializes a newly-created request, or re-initializes an existing one. (async=true)
+	    xhr.open("POST","http://localhost:8080/DemoServlet/finishedcourses",false); //url is an address to a file on a server
+	    xhr.setRequestHeader("Content-type","application/x-www-form-url-encoded");  //sets the value of an HTTP request header.
+	    xhr.onreadystatechange = function(){  //This should not be used with synchronous requests
+	        if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+	            //Handle the response from the backend
+	            console.log(xhr.responseText);
+	          //  window.alert("Response : "+ xhr.responseText);
+	            document.getElementById("finished").innerHTML = xhr.responseText;
+	        }
+	    };
+
+	    xhr.send();
+	}
+	
+	function start(){
+		ongoing();
+		finished();
+	}
+
+window.addEventListener("load",start,false);
+</script>
+</head>
+<body>
+        <div class="header" id="header">
+            <div class="navbar">
+                <div class="navleft">
+                    <a href="https://upt.edu.al/" id="UPT-logo"><img src="Imazhe/UPT_logo.png" id="UPT-logo"></a>
+                    <a href="Home.html" id="home">Home</a>
+                    <div class="dropdown">
+                        <a href="courses.html" class="dropbtn">Courses &#709;</a>
+                        <div class="dropdown-content">
+                            <a href="courses.html">Courses</a>
+                            <a href="topCourses.html">Top Courses</a>
+                        </div>
+                    </div>
+                    <a href="myCourses.html" id="myCourses">My courses</a>
+                    <a href="timetable.html" id="timetable">Timetable</a>
+                    <a href="about.html" id="about">About us</a>
+                </div>
+            
+                <div class="navright">
+                  <form action="LogOutServlet" method="post">
+                       <a href="login.html" id="logout" >Logout</a>
+                  </form>     
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="allCourses">
+            <h1>My courses:</h1>
+            
+            
+           <form action="UnregisterCourseServlet" method="post">
+           <h2>Ongoing:</h2>
+            <div class="ongoingCourses" id="ongoing">
+                
+                
+         
+                
+            </div>
+            </form>
+            <br>
+            <form action="DataNeededForFeedbackServlet" method="post">
+            <h2>Finished:</h2>
+            <div class="finishedCourses" id="finished">
+                
+            </div>
+            </form>
+       </div>
+</body>
+    <footer>
+        <div class="contact">
+            <h4>Contact Us</h4>          
+            <p>Phone number: +355 4 227 81 59<br>
+            Email: <a href="mailto:info@upt.al">info@upt.al</a> <br>
+            Website: <a href="https://upt.edu.al/">www.upt.edu.al</a> <br>
+            Address: Bul. "Dëshmorët e Kombit", Mother Teresa Square
+            </p>
+        </div>
+        <p id="copyright">&copy; Copyright 2024 - Polytechnic University of Tirana</p>
+    </footer>
+</html>

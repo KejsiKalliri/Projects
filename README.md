@@ -16,12 +16,6 @@ A desktop application for managing Formula 1 drivers. The application supports a
 
 **Technologies used:** Java, Java Swing
 
-### Gym Project
-
-A web platform where users can register and log in, select personalized workouts, receive automatic instructions, complete workout tasks, and track both weekly and total progress.
-
-**Technologies used:** PHP, HTML, CSS, JavaScript, jQuery, AJAX, MySQL, phpMyAdmin
-
 ### Sentiment Analysis of Comments
 
 A machine learning project focused on sentiment analysis using a pre-existing corpus of Twitter comments. The dataset was preprocessed and used to train and compare two models: Multi-Layer Perceptron (MLP) and Logistic Regression.
